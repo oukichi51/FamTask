@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  famtask:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - ./node_modules:/app/node_modules
+    command: >
+      sh -c "npm install &&
+             npx tailwindcss -i ./src/css/input.css -o ./dist/output.css &&
+             npm run build &&
+             npm run start"
+    restart: always

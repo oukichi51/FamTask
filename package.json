@@ -1,0 +1,17 @@
+{
+  "name": "famtask",
+  "version": "1.0.0",
+  "description": "FamTask - 家事管理ウェブアプリ",
+  "main": "app.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/css/input.css -o ./dist/output.css",
+    "start": "http-server /app",
+    "build": "npx tailwindcss -i ./src/css/input.css -o ./dist/output.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "dependencies": {
+    "http-server": "^14.0.0"
+  }
+}
